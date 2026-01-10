@@ -92,6 +92,24 @@
       color: white;
       padding: 20px 0;
     }
+    /* HERO IMAGE RESPONSIVE FIX */
+.hero-img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+}
+
+/* Extra spacing on small devices */
+@media (max-width: 768px) {
+  .hero {
+    padding-bottom: 60px;
+  }
+
+  .hero-img {
+    max-width: 220px;
+    margin-bottom: 20px;
+  }
+}
   </style>
 </head>
 <body>
@@ -126,7 +144,7 @@
       </div>
       <div class="col-lg-5 text-center mt-4 mt-lg-0">
         <div class="profile-img-placeholder mx-auto">
-          <img src="pic.jpeg" alt="" class="rounded-circle" width="350px" height="340px">
+          <img src="pic.jpeg" alt="Aman Shaikh" class="img-fluid rounded-circle hero-img">
         </div>
       </div>
     </div>
