@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aman Shaikh | Electrical & Frontend Engineer</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      background: #f8f9fb;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0d6efd, #6610f2);
+      color: white;
+      padding: 140px 0;
+    }
+    .hero-shape {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      top: -150px;
+      right: -150px;
+    }
+    .profile-img-placeholder {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      border: 4px dashed rgba(255,255,255,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .section-title {
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+    .card {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .skill-badge {
+      background: #ffffff;
+      padding: 12px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      margin: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .skill-badge:hover {
+      background: linear-gradient(135deg, #0d6efd, #6610f2);
+      color: #fff;
+      transform: translateY(-6px);
+    }
+    .contact-card {
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+    footer {
+      background: #0d6efd;
+      color: white;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Aman Shaikh</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero text-center position-relative overflow-hidden">
+  <div class="container position-relative" data-aos="fade-up">
+    <div class="row align-items-center">
+      <div class="col-lg-7 text-lg-start text-center">
+        <h1 class="fw-bold">Aman Shaikh</h1>
+        <p class="lead mt-3">Electrical & Power Engineer | R&D Engineer | Frontend Developer (React)</p>
+        <a href="#experience" class="btn btn-light btn-lg mt-3 me-2">Work Experience</a>
+        <a href="#projects" class="btn btn-outline-light btn-lg mt-3">Projects</a>
+      </div>
+      <div class="col-lg-5 text-center mt-4 mt-lg-0">
+        <div class="profile-img-placeholder mx-auto">
+          <img src="pic.jpeg" alt="" class="rounded-circle" width="350px" height="340px">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-shape"></div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center">About Me</h2>
+    <p class="text-center col-lg-10 mx-auto">
+      Detail-oriented Electrical and Power Engineering graduate (2023) with hands-on experience in solar power projects,
+      HT line documentation, and electrical design support. Proficient in AutoCAD Electrical, technical documentation,
+      and project coordination. Additionally skilled in frontend development using HTML, CSS, JavaScript, Bootstrap,
+      and React JS, with basic knowledge of data analysis. Passionate about clean energy, continuous learning,
+      and process improvement.
+    </p>
+  </div>
+</section>
+
+<section id="education" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5" data-aos="fade-up">
+      <i class="bi bi-mortarboard-fill text-primary"></i> Education
+    </h2>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10" data-aos="zoom-in">
+        <div class="card shadow p-4">
+
+          <div class="row g-4">
+
+            <!-- BTECH -->
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="card h-100 border-0 shadow-sm text-center p-3">
+
+                <div class="fs-1 text-primary mb-2">
+                  <i class="bi bi-mortarboard"></i>
+                </div>
+
+                <h5 class="fw-bold">B.Tech</h5>
+                <p class="small text-muted mb-1">
+                  Electrical & Power Engineering
+                </p>
+
+                <p class="small">
+                  M. S. Bidve College of Engineering, Latur
+                </p>
+
+                <span class="badge bg-primary">
+                  2023 • 77%
+                </span>
+
+              </div>
+            </div>
+
+            <!-- DIPLOMA -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="card h-100 border-0 shadow-sm text-center p-3">
+
+                <div class="fs-1 text-success mb-2">
+                  <i class="bi bi-award"></i>
+                </div>
+
+                <h5 class="fw-bold">Diploma</h5>
+                <p class="small text-muted mb-1">
+                  Electrical Engineering
+                </p>
+
+                <p class="small">
+                  Puranmal Lahoti Government Polytechnic, Latur
+                </p>
+
+                <span class="badge bg-success">
+                  2020 • 86.11%
+                </span>
+
+              </div>
+            </div>
+
+            <!-- 10TH -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="card h-100 border-0 shadow-sm text-center p-3">
+
+                <div class="fs-1 text-warning mb-2">
+                  <i class="bi bi-book"></i>
+                </div>
+
+                <h5 class="fw-bold">SSC (10th)</h5>
+                <p class="small text-muted mb-1">
+                  Secondary School Certificate
+                </p>
+
+                <p class="small">
+                  St. Mary’s Convent English School, Nilanga
+                </p>
+
+                <span class="badge bg-warning text-dark">
+                  2017
+                </span>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center" data-aos="fade-up">Skills</h2>
+    <div class="text-center" data-aos="zoom-in">
+      <span class="skill-badge"><i class="bi bi-pencil"></i> AutoCAD Electrical</span>
+      <span class="skill-badge"><i class="bi bi-diagram-3"></i> SLD & Schematics</span>
+      <span class="skill-badge"><i class="bi bi-sun"></i> Solar Power Systems</span>
+      <span class="skill-badge"><i class="bi bi-cpu"></i> MATLAB / Simulink</span>
+      <span class="skill-badge"><i class="bi bi-bar-chart"></i> Power BI (Basic)</span>
+      <span class="skill-badge"><i class="bi bi-code-slash"></i> HTML / CSS</span>
+      <span class="skill-badge"><i class="bi bi-braces"></i> JavaScript</span>
+      <span class="skill-badge"><i class="bi bi-bootstrap"></i> Bootstrap 5</span>
+      <span class="skill-badge"><i class="bi bi-react"></i> React JS</span>
+      <span class="skill-badge"><i class="bi bi-file-text"></i> Technical Documentation</span>
+      <span class="skill-badge"><i class="bi bi-kanban"></i> Project Management</span>
+      <span class="skill-badge"><i class="bi bi-palette"></i> Graphical Design</span>
+      <span class="skill-badge"><i class="bi bi-pencil-square"></i> Content Creation</span>
+
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section --><section id="experience" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-5" data-aos="fade-up">
+      <i class="bi bi-briefcase-fill text-primary"></i> Work Experience
+    </h2>
+
+    <div class="row g-4">
+
+      <!-- Megha Enterprises -->
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="card shadow-sm h-100 p-4">
+
+          <h5 class="fw-bold text-dark">
+            Megha Enterprises – Research & Development Engineer
+          </h5>
+          <p class="text-muted small mb-1">
+            Waluj MIDC, Aurangabad | Dec 2024 – Sep 2025
+          </p>
+
+          <p class="mb-3">
+            Backend technical support for solar EPC projects and HT electrical products.
+          </p>
+
+          <button class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#work1">
+            Read More
+          </button>
+
+          <div class="collapse mt-4" id="work1">
+
+            <h6 class="fw-semibold text-primary">
+              <i class="bi bi-clipboard-check"></i> Role Summary
+            </h6>
+            <p class="small text-muted">
+              Worked as a Research & Development Engineer providing technical and backend
+              engineering support for solar power projects and HT electrical products.
+              Actively involved in AutoCAD design, documentation, approvals, and
+              cross-functional coordination.
+            </p>
+
+            <h6 class="fw-semibold text-primary mt-3">
+              <i class="bi bi-list-task"></i> Key Responsibilities
+            </h6>
+            <ul class="small">
+              <li>Backend technical support for solar EPC projects and documentation</li>
+              <li>HT product approval handling as per electrical standards</li>
+              <li>Preparation of documents for AB Switches, Isolators, HGF units</li>
+              <li>AutoCAD drawings and electrical schematics</li>
+              <li>Coordination with site teams, R&D, and customers</li>
+              <li>Technical clarification and customer support</li>
+              <li>Support for internal R&D product improvements</li>
+            </ul>
+
+            <h6 class="fw-semibold text-primary mt-3">
+              <i class="bi bi-lightbulb-fill"></i> Learning Outcomes
+            </h6>
+            <ul class="small">
+              <li>Exposure to solar power systems and HT equipment</li>
+              <li>Understanding of approvals, compliance, and standards</li>
+              <li>Improved AutoCAD Electrical skills</li>
+              <li>Professional documentation and quotation experience</li>
+              <li>Enhanced coordination and communication skills</li>
+            </ul>
+
+            <h6 class="fw-semibold text-primary mt-3">
+              <i class="bi bi-award-fill"></i> Achievements
+            </h6>
+            <ul class="small">
+              <li>Supported multiple solar project proposals</li>
+              <li>Contributed to timely HT product approvals</li>
+              <li>Delivered accurate AutoCAD drawings for execution</li>
+              <li>Recognized for dependable backend engineering support</li>
+            </ul>
+
+            <h6 class="fw-semibold text-primary mt-3">
+              <i class="bi bi-tools"></i> Tools & Technologies
+            </h6>
+            <p class="small mb-0">
+              AutoCAD / AutoCAD Electrical, MS Word, Excel, PowerPoint,
+              Electrical Standards, Technical Datasheets, Solar Documentation Tools
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- MEIL -->
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="card shadow-sm h-100 p-4">
+
+          <h5 class="fw-bold text-dark">
+            MEIL – Graduate Trainee Engineer
+          </h5>
+          <p class="text-muted small mb-1">
+            Aurangabad | Nov 2024 – Dec 2024
+          </p>
+
+          <p class="mb-3">
+            Solar power project execution, site exposure, and field engineering support.
+          </p>
+
+          <button class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#work2">
+            Read More
+          </button>
+
+            <div class="collapse mt-4" id="work2">
+    
+                <h6 class="fw-semibold text-primary">
+                <i class="bi bi-clipboard-check"></i> Role Summary
+                </h6>
+                <p class="small text">
+                 Worked as a Graduate Trainee Engineer on solar power infrastructure projects, 
+                 gaining hands-on exposure to site execution, field engineering practices, 
+                 and coordination with multidisciplinary teams. Actively supported engineering
+                  activities related to design review, documentation, safety compliance, and project workflow.
+                </p>
+
+                <h6 class="fw-semibold text-primary mt-3">
+                  <i class="bi bi-list-task"></i> Key Responsibilities
+                </h6>
+                <ul class="small">
+                  <li>Participated in solar power project execution activities, including
+                    site visits and on-ground engineering support.</li>
+                  <li>Assisted engineering teams in design review and technical documentation preparation.</li>
+              <li>Supported project coordination tasks to ensure smooth workflow between site teams and engineers.</li>
+              <li>Collaborated with civil, electrical, and project management teams during execution stages.</li>
+              <li>Assisted in maintaining project records and reports as per company guidelines.</li>
+            </ul>
+
+            <h6 class="fw-semibold text-primary mt-3">
+              <i class="bi bi-lightbulb-fill"></i> Learning Outcomes
+            </h6>
+            <ul class="small">
+              <li>Learned the importance of safety practices, quality control, and compliance in large infrastructure projects.</li>
+              <li>Improved coordination and teamwork skills by working with multidisciplinary engineering teams.</li>
+            </ul>
+
+            <h6 class="fw-semibold text-primary mt-3">
+              <i class="bi bi-award-fill"></i> Achievements
+            </h6>
+            <ul class="small">
+              <li>Successfully supported site engineers during active project execution phases.</li>
+              <li>Contributed to timely completion of documentation and coordination tasks.</li>
+              
+            </ul>
+
+            <h6 class="fw-semibold text-primary mt-3">
+              <i class="bi bi-tools"></i> Tools & Technologies
+            </h6>
+            <p class="small mb-0">
+              Site Engineering & Field Documentation,Safety & Compliance Procedures,AutoCAD / AutoCAD Electrical, MS Word, Excel, PowerPoint,
+              Electrical Standards, Technical Datasheets.
+            </p>
+                 
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Projects Section -->
+
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-5" data-aos="fade-up">
+      <i class="bi bi-diagram-3-fill text-primary"></i> Projects
+    </h2>
+
+    <div class="row g-4">
+
+      <!-- PROJECT 1 (FILLED) -->
+      <div class="col-lg-12" data-aos="zoom-in">
+        <div class="card shadow-sm p-4">
+
+          <h4 class="fw-bold">
+            Modelling and Simulation of Hybrid Wind–Solar Energy System Using MPPT
+          </h4>
+          <p class="text-muted small">
+            Academic Project | MATLAB / Simulink
+          </p>
+
+          <p>
+            Designed and simulated a hybrid renewable energy system integrating
+            solar PV and wind energy using MPPT techniques for improved efficiency
+            and reliability.
+          </p>
+
+          <button class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#project1">
+            Read More
+          </button>
+
+          <div class="collapse mt-4" id="project1">
+
+            <h6 class="text-primary fw-semibold">
+              <i class="bi bi-info-circle-fill"></i> Project Overview
+            </h6>
+            <p class="small text-muted">
+              The project focuses on modelling and simulation of a hybrid
+              wind–solar renewable energy system using MATLAB/Simulink.
+              MPPT algorithms are implemented to maximize power extraction
+              under varying environmental conditions.
+            </p>
+
+            <h6 class="text-primary fw-semibold mt-3">
+              <i class="bi bi-bullseye"></i> Objectives
+            </h6>
+            <ul class="small">
+              <li>Design and model a hybrid wind–solar power system</li>
+              <li>Implement MPPT algorithms</li>
+              <li>Analyze system performance under variable conditions</li>
+              <li>Improve efficiency and reliability</li>
+            </ul>
+
+          <h6 class="fw-semibold text-primary mt-3">
+              <i class="bi bi-cpu-fill"></i> Technologies & Tools
+            </h6>
+            <ul class="small">
+              <li>MATLAB / Simulink</li>
+              <li>Simulink Power Systems Toolbox</li>
+              <li>Solar PV System</li>
+              <li>Wind Energy Conversion System (WECS)</li>
+              <li>DC–DC Converters & Inverter</li>
+              <li>MPPT Algorithms</li>
+            </ul>
+
+            <h6 class="fw-semibold text-primary mt-3">
+              <i class="bi bi-gear-fill"></i> MPPT Techniques Studied
+            </h6>
+            <ul class="small">
+              <li>Perturb & Observe (P&O)</li>
+              <li>Incremental Conductance (INC)</li>
+              <li>Constant Voltage Method</li>
+              <li>Constant Current Method</li>
+              <li>Fuzzy Logic Control</li>
+            </ul>
+
+            <h6 class="fw-semibold text-primary mt-3">
+              <i class="bi bi-graph-up-arrow"></i> Key Results
+            </h6>
+            <ul class="small">
+              <li>Higher efficiency compared to standalone systems</li>
+              <li>Improved power extraction using MPPT</li>
+              <li>Incremental Conductance showed better tracking accuracy</li>
+              <li>Stable DC and AC output under variable conditions</li>
+              <li>Reduced power fluctuations</li>
+            </ul>
+
+            <h6 class="fw-semibold text-primary mt-3">
+              <i class="bi bi-globe2"></i> Applications
+            </h6>
+            <ul class="small mb-0">
+              <li>Rural and remote electrification</li>
+              <li>Residential and commercial buildings</li>
+              <li>Hospitals, schools, and telecom towers</li>
+              <li>Off-grid and backup power systems</li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 (EMPTY) -->
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="card shadow-sm p-4 h-100 text-center">
+
+          <h5 class="fw-bold text-muted">
+            Project Title (REACT JS PROJECT in Progress)
+          </h5>
+
+          <p class="small text-muted">
+            wil be updated soon
+          </p>
+
+          <button class="btn btn-outline-secondary btn-sm"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#project2">
+            Read More
+          </button>
+
+          <div class="collapse mt-3" id="project2">
+            <p class="small text-muted">
+              <!-- Add project details here -->
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJECT 3 (EMPTY) -->
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="card shadow-sm p-4 h-100 text-center">
+
+          <h5 class="fw-bold text-muted">
+            Project Title (To Be Added)
+          </h5>
+
+          <p class="small text-muted">
+            Description will be added
+          </p>
+
+          <button class="btn btn-outline-secondary btn-sm"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#project3">
+            Read More
+          </button>
+
+          <div class="collapse mt-3" id="project3">
+            <p class="small text-muted">
+              <!-- Add project details here -->
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-dark text-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-5" data-aos="fade-up">
+      <i class="bi bi-envelope-paper-heart-fill text-warning"></i> Contact Me
+    </h2>
+
+    <div class="row g-4 align-items-center">
+
+      <!-- Contact Info -->
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="card bg-transparent border-0 text-light p-4">
+
+          <h4 class="fw-bold mb-3">Let’s Connect</h4>
+          <p class="text-muted">
+            I’m open to opportunities, collaborations, and professional discussions.
+            Feel free to reach out.
+          </p>
+
+          <ul class="list-unstyled mt-4">
+
+            <li class="mb-3 d-flex align-items-center">
+              <i class="bi bi-envelope-fill text-warning fs-4 me-3"></i>
+              <a href="mailto:amanshkoffice@gmail.com"
+                 class="text-light text-decoration-none">
+                amanshkoffice@gmail.com
+              </a>
+            </li>
+
+            <li class="mb-3 d-flex align-items-center">
+              <i class="bi bi-telephone-fill text-success fs-4 me-3"></i>
+              <a href="tel:+919503882018"
+                 class="text-light text-decoration-none">
+                +91 95038 82018
+              </a>
+            </li>
+
+            <li class="mb-3 d-flex align-items-center">
+              <i class="bi bi-geo-alt-fill text-info fs-4 me-3"></i>
+              <span>Latur, Maharashtra, India</span>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- Contact Card -->
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="card shadow-lg p-4 contact-card">
+
+          <h5 class="fw-bold mb-3 text-dark">
+            Quick Message
+          </h5>
+
+          <p class="small text-muted">
+            Send a message or connect via social platforms.
+          </p>
+
+          <div class="d-flex gap-3 mt-4 flex-wrap">
+
+            <a href="mailto:amanshkoffice@gmail.com"
+               class="btn btn-warning">
+              <i class="bi bi-envelope-fill"></i> Email Me
+            </a>
+
+            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN"
+               target="_blank"
+               class="btn btn-primary">
+              <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+
+            <a href="https://github.com/YOUR-GITHUB"
+               target="_blank"
+               class="btn btn-dark">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="youtube" class="py-5 bg-secondary text-light">
+  <div class="container text-center" data-aos="zoom-in">
+    
+    <i class="bi bi-youtube display-4 text-danger mb-3"></i>
+
+    <h2 class="fw-bold">My YouTube Channel</h2>
+    <p class="text-muted">
+      I share content related to technology, learning, and creative projects.
+    </p>
+
+    <a href="https://youtube.com/@top10hunt-h6i?si=BCHJCzw0ivCwE7il"
+       target="_blank"
+       class="btn btn-danger btn-lg mt-3 shadow">
+      <i class="bi bi-play-circle-fill"></i> Visit Channel
+    </a>
+
+  </div>
+</section>
+
+<<section id="hobbies" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5" data-aos="fade-up">
+      <i class="bi bi-stars text-primary"></i> Hobbies & Interests
+    </h2>
+
+    <div class="row g-4">
+
+      <!-- Learning -->
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card h-100 shadow-sm text-center p-4 hobby-card">
+          <i class="bi bi-lightbulb-fill text-warning display-5 mb-3"></i>
+          <h5 class="fw-bold">Learning New Technologies</h5>
+          <p class="small text-muted">
+            Exploring new tools, software, and emerging technologies.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bike Riding -->
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+        <div class="card h-100 shadow-sm text-center p-4 hobby-card">
+          <i class="bi bi-bicycle text-primary display-5 mb-3"></i>
+          <h5 class="fw-bold">Bike Riding</h5>
+          <p class="small text-muted">
+            Passionate about long rides, adventure, and exploring new routes.
+          </p>
+        </div>
+      </div>
+
+      <!-- Content Creation -->
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+        <div class="card h-100 shadow-sm text-center p-4 hobby-card">
+          <i class="bi bi-camera-reels-fill text-danger display-5 mb-3"></i>
+          <h5 class="fw-bold">Content Creation</h5>
+          <p class="small text-muted">
+            Creating educational and technical content for online platforms.
+          </p>
+        </div>
+      </div>
+
+      <!-- Gym -->
+      <div class="col-md-4" data-aos="flip-right">
+        <div class="card h-100 shadow-sm text-center p-4 hobby-card">
+          <i class="bi bi-heart-pulse-fill text-success display-5 mb-3"></i>
+          <h5 class="fw-bold">Gym & Fitness</h5>
+          <p class="small text-muted">
+            Maintaining fitness, discipline, and a healthy lifestyle.
+          </p>
+        </div>
+      </div>
+
+      <!-- Clean Energy -->
+      <div class="col-md-4" data-aos="flip-right" data-aos-delay="100">
+        <div class="card h-100 shadow-sm text-center p-4 hobby-card">
+          <i class="bi bi-globe text-info display-5 mb-3"></i>
+          <h5 class="fw-bold">Clean Energy Awareness</h5>
+          <p class="small text-muted">
+            Passionate about renewable energy and sustainable solutions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Music -->
+      <div class="col-md-4" data-aos="flip-right" data-aos-delay="200">
+        <div class="card h-100 shadow-sm text-center p-4 hobby-card">
+          <i class="bi bi-music-note-beamed text-secondary display-5 mb-3"></i>
+          <h5 class="fw-bold">Music & Relaxation</h5>
+          <p class="small text-muted">
+            Listening to music to refresh focus and creativity.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="text-center">
+  <div class="container">
+    <p class="mb-0">© 2026 Aman Shaikh. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+
+</body>
+</html>
