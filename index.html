@@ -320,9 +320,17 @@
           <strong>AutoCAD / AutoCAD Electrical</strong><br>
           <small class="text-muted">Certified Training Program</small>
         </div>
-        <button class="btn btn-outline-primary btn-sm"
-                data-bs-toggle="modal"
-                data-bs-target="#cert1Modal">
+        <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#cert1Modal">
+          View
+        </button>
+      </div>
+
+      <div class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <strong>Full Stack Development</strong><br>
+          <small class="text-muted">Online Course</small>
+        </div>
+        <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#cert2Modal">
           View
         </button>
       </div>
@@ -332,21 +340,7 @@
           <strong>Internship Certificate</strong><br>
           <small class="text-muted">Industrial Training</small>
         </div>
-        <button class="btn btn-outline-primary btn-sm"
-                data-bs-toggle="modal"
-                data-bs-target="#cert2Modal">
-          View
-        </button>
-      </div>
-
-      <div class="list-group-item d-flex justify-content-between align-items-center">
-        <div>
-          <strong>Internship Certificate</strong><br>
-          <small class="text-muted">Hands-on Technical Training</small>
-        </div>
-        <button class="btn btn-outline-primary btn-sm"
-                data-bs-toggle="modal"
-                data-bs-target="#cert3Modal">
+        <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#cert3Modal">
           View
         </button>
       </div>
@@ -356,9 +350,7 @@
           <strong>Workshop: AI in Excel & MS Office</strong><br>
           <small class="text-muted">Productivity & Automation</small>
         </div>
-        <button class="btn btn-outline-primary btn-sm"
-                data-bs-toggle="modal"
-                data-bs-target="#cert4Modal">
+        <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#cert4Modal">
           View
         </button>
       </div>
@@ -366,6 +358,7 @@
     </div>
   </div>
 </section>
+
 
 
 
@@ -1017,6 +1010,65 @@
 <script>
   AOS.init({ duration: 1000, once: true });
 </script>
+<!-- CERT 1 -->
+<div class="modal fade" id="cert1Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">AutoCAD / AutoCAD Electrical</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="autocad-cert.jpeg" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CERT 2 -->
+<div class="modal fade" id="cert2Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Full Stack Development</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="fullstack-cert.jpeg" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CERT 3 -->
+<div class="modal fade" id="cert3Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Internship Certificate</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="internship-1.jpeg" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CERT 4 -->
+<div class="modal fade" id="cert4Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">AI in Excel & MS Office</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="workshop-1.jpeg" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
