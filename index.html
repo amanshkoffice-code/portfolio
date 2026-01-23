@@ -119,14 +119,22 @@
   transform: translateY(-6px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
-    .cert-thumb {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    #certifications .list-group-item {
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 20px;
+  background: transparent;
 }
 
-.cert-thumb:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+#certifications .list-group-item:hover {
+  background: #f1f5f9;
 }
+
+.modal-body img {
+  max-height: 75vh;
+  object-fit: contain;
+}
+
 
 
   </style>
@@ -302,60 +310,63 @@
 </section>
 
 <section id="certifications" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Certifications</h2>
 
-<div class="container">
-  <h2 class="section-title text-center mb-4">Certifications</h2>
+    <div class="list-group shadow-sm">
 
-  <div class="row g-4">
+      <div class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <strong>AutoCAD / AutoCAD Electrical</strong><br>
+          <small class="text-muted">Certified Training Program</small>
+        </div>
+        <button class="btn btn-outline-primary btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#cert1Modal">
+          View
+        </button>
+      </div>
 
-    <!-- Certificate 1 -->
-    <div class="col-md-3 col-sm-6 text-center">
-      <img src="autocad-cert.jpeg"
-           class="img-fluid rounded shadow cert-thumb"
-           data-bs-toggle="modal"
-           data-bs-target="#cert1Modal"
-           style="cursor:pointer;"
-           alt="AutoCAD Certificate">
-      <p class="mt-2 small fw-semibold">AutoCAD / AutoCAD Electrical</p>
+      <div class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <strong>Internship Certificate</strong><br>
+          <small class="text-muted">Industrial Training</small>
+        </div>
+        <button class="btn btn-outline-primary btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#cert2Modal">
+          View
+        </button>
+      </div>
+
+      <div class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <strong>Internship Certificate</strong><br>
+          <small class="text-muted">Hands-on Technical Training</small>
+        </div>
+        <button class="btn btn-outline-primary btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#cert3Modal">
+          View
+        </button>
+      </div>
+
+      <div class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <strong>Workshop: AI in Excel & MS Office</strong><br>
+          <small class="text-muted">Productivity & Automation</small>
+        </div>
+        <button class="btn btn-outline-primary btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#cert4Modal">
+          View
+        </button>
+      </div>
+
     </div>
-
-    <!-- Certificate 2 -->
-    <div class="col-md-3 col-sm-6 text-center">
-      <img src="internship-2.jpeg"
-           class="img-fluid rounded shadow cert-thumb"
-           data-bs-toggle="modal"
-           data-bs-target="#cert2Modal"
-           style="cursor:pointer;"
-           alt="Internship Certificate">
-      <p class="mt-2 small fw-semibold">Internship Certificate</p>
-    </div>
-
-    <!-- Certificate 3 -->
-    <div class="col-md-3 col-sm-6 text-center">
-      <img src="internship-1.jpeg"
-           class="img-fluid rounded shadow cert-thumb"
-           data-bs-toggle="modal"
-           data-bs-target="#cert3Modal"
-           style="cursor:pointer;"
-           alt="Internship Certificate">
-      <p class="mt-2 small fw-semibold">Internship Certificate</p>
-    </div>
-
-    <!-- Certificate 4 -->
-    <div class="col-md-3 col-sm-6 text-center">
-      <img src="workshop-1.jpeg"
-           class="img-fluid rounded shadow cert-thumb"
-           data-bs-toggle="modal"
-           data-bs-target="#cert4Modal"
-           style="cursor:pointer;"
-           alt="Workshop Certificate">
-      <p class="mt-2 small fw-semibold">Workshop: AI in Excel & MS Office</p>
-    </div>
-
   </div>
-</div>
-
 </section>
+
 
 
 <!-- Projects Section --><section id="experience" class="py-5 bg-light">
