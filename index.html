@@ -119,6 +119,15 @@
   transform: translateY(-6px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
+    .cert-thumb {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-thumb:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
 
   </style>
 </head>
@@ -294,65 +303,57 @@
 
 <section id="certifications" class="py-5">
 
-  <!-- CERT 1 MODAL -->
-  <div class="modal fade" id="cert1Modal" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">AutoCAD / AutoCAD Electrical Certificate</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body text-center">
-          <img src="autocad-cert.jpeg" class="img-fluid rounded" alt="AutoCAD Certificate">
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+  <h2 class="section-title text-center mb-4">Certifications</h2>
 
-  <!-- CERT 2 MODAL -->
-  <div class="modal fade" id="cert2Modal" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Internship Certificate</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body text-center">
-          <img src="internship-2.jpeg" class="img-fluid rounded" alt="Internship Certificate">
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="row g-4">
 
-  <!-- CERT 3 MODAL -->
-  <div class="modal fade" id="cert3Modal" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Internship Certificate</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body text-center">
-          <img src="internship-1.jpeg" class="img-fluid rounded" alt="Internship Certificate">
-        </div>
-      </div>
+    <!-- Certificate 1 -->
+    <div class="col-md-3 col-sm-6 text-center">
+      <img src="autocad-cert.jpeg"
+           class="img-fluid rounded shadow cert-thumb"
+           data-bs-toggle="modal"
+           data-bs-target="#cert1Modal"
+           style="cursor:pointer;"
+           alt="AutoCAD Certificate">
+      <p class="mt-2 small fw-semibold">AutoCAD / AutoCAD Electrical</p>
     </div>
-  </div>
 
-  <!-- CERT 4 MODAL (FIXED ID) -->
-  <div class="modal fade" id="cert4Modal" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Workshop: AI in Excel & MS Office</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body text-center">
-          <img src="workshop-1.jpeg" class="img-fluid rounded" alt="Workshop Certificate">
-        </div>
-      </div>
+    <!-- Certificate 2 -->
+    <div class="col-md-3 col-sm-6 text-center">
+      <img src="internship-2.jpeg"
+           class="img-fluid rounded shadow cert-thumb"
+           data-bs-toggle="modal"
+           data-bs-target="#cert2Modal"
+           style="cursor:pointer;"
+           alt="Internship Certificate">
+      <p class="mt-2 small fw-semibold">Internship Certificate</p>
     </div>
+
+    <!-- Certificate 3 -->
+    <div class="col-md-3 col-sm-6 text-center">
+      <img src="internship-1.jpeg"
+           class="img-fluid rounded shadow cert-thumb"
+           data-bs-toggle="modal"
+           data-bs-target="#cert3Modal"
+           style="cursor:pointer;"
+           alt="Internship Certificate">
+      <p class="mt-2 small fw-semibold">Internship Certificate</p>
+    </div>
+
+    <!-- Certificate 4 -->
+    <div class="col-md-3 col-sm-6 text-center">
+      <img src="workshop-1.jpeg"
+           class="img-fluid rounded shadow cert-thumb"
+           data-bs-toggle="modal"
+           data-bs-target="#cert4Modal"
+           style="cursor:pointer;"
+           alt="Workshop Certificate">
+      <p class="mt-2 small fw-semibold">Workshop: AI in Excel & MS Office</p>
+    </div>
+
   </div>
+</div>
 
 </section>
 
