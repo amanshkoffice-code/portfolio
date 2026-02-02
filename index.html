@@ -28,6 +28,20 @@
       color: white;
       padding: 140px 0;
     }
+    body[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+body[dir="rtl"] .navbar-nav {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+body[dir="rtl"] .list-group-item {
+  text-align: right;
+}
+
     .hero-shape {
       position: absolute;
       width: 400px;
@@ -150,6 +164,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown ms-3">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+    🌐 Language
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><a class="dropdown-item lang-select" data-lang="en">English</a></li>
+    <li><a class="dropdown-item lang-select" data-lang="hi">हिंदी (Hindi)</a></li>
+    <li><a class="dropdown-item lang-select" data-lang="mr">मराठी (Marathi)</a></li>
+    <li><a class="dropdown-item lang-select" data-lang="de">Deutsch (German)</a></li>
+    <li><a class="dropdown-item lang-select" data-lang="ar">العربية (Arabic)</a></li>
+  </ul>
+</li>
+
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
@@ -1096,6 +1123,72 @@
     </div>
   </div>
 </div>
+  <script>
+const API_URL = "https://libretranslate.de/translate";
+const cache = {};
+
+async function translateText(text, targetLang) {
+  if (!text.trim()) return text;
+
+  const cacheKey = targetLang + text;
+  if (cache[cacheKey]) return cache[cacheKey];
+
+  const res = await fetch(API_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      q: text,
+      source: "en",
+      target: targetLang,
+      format: "text"
+    })
+  });
+
+  const data = await res.json();
+  cache[cacheKey] = data.translatedText;
+  return data.translatedText;
+}
+
+async function translatePage(lang) {
+  const root = document.getElementById("translate-root");
+  const elements = root.querySelectorAll("p, h1, h2, h3, h4, h5, h6, li, span, small");
+
+  // RTL handling for Arabic
+  if (lang === "ar") {
+    document.body.setAttribute("dir", "rtl");
+  } else {
+    document.body.setAttribute("dir", "ltr");
+  }
+
+  for (const el of elements) {
+    if (!el.dataset.original) {
+      el.dataset.original = el.innerText;
+    }
+
+    if (lang === "en") {
+      el.innerText = el.dataset.original;
+    } else {
+      el.innerText = await translateText(el.dataset.original, lang);
+    }
+  }
+
+  localStorage.setItem("lang", lang);
+}
+
+// Click handler
+document.querySelectorAll(".lang-select").forEach(btn => {
+  btn.addEventListener("click", () => {
+    translatePage(btn.dataset.lang);
+  });
+});
+
+// Auto-load saved language
+const savedLang = localStorage.getItem("lang");
+if (savedLang && savedLang !== "en") {
+  translatePage(savedLang);
+}
+</script>
+
 
 </body>
 </html>
