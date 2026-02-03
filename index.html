@@ -134,7 +134,44 @@
   max-height: 75vh;
   object-fit: contain;
 }
+ .hero {
+    padding-bottom: 60px;
+  }
 
+  .hero-img {
+    max-width: 220px;
+    margin-bottom: 20px;
+  }
+}
+    .cert-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+#workCarousel {
+  max-width: 490px;
+  position: relative;
+  z-index: 5;
+
+  border-radius: 22px;
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.6),
+    0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+#workCarousel img {
+  height: 480px;
+  object-fit:fill
+}
+#workCarousel .carousel-inner {
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.7),
+    0 15px 40px rgba(0, 0, 0, 0.4);
+}
 
 
   </style>
@@ -160,7 +197,7 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="hero text-center position-relative overflow-hidden">
+<section class="hero text-center position-relative">
   <div class="container position-relative" data-aos="fade-up">
     <div class="row align-items-center">
       <div class="col-lg-7 text-lg-start text-center">
@@ -170,9 +207,60 @@
         <a href="#projects" class="btn btn-outline-light btn-lg mt-3">Projects</a>
       </div>
       <div class="col-lg-5 text-center mt-4 mt-lg-0">
-        <div class="profile-img-placeholder mx-auto">
-          <img src="pic.jpeg" alt="Aman Shaikh" class="img-fluid rounded-circle hero-img">
-        </div>
+        <div id="workCarousel" class="carousel slide mx-auto" data-bs-ride="carousel">
+  
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#workCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#workCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#workCarousel" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#workCarousel" data-bs-slide-to="3"></button>
+  </div>
+
+  <!-- Slides -->
+  <div class="carousel-inner rounded shadow">
+
+    <div class="carousel-item active">
+      <img src="autocad.jpg" class="d-block w-100" alt="AutoCAD Drawing">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style="text-shadow: 3px 3px 3px rgb(245, 245, 245); color: navy; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">AutoCAD Electrical Drawings</h5>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="solar-installation.jpg" class="d-block w-100" alt="Solar Installation">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style="text-shadow: 3px 3px 3px rgb(245, 245, 245); color: navy; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Solar Site installation </h5>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="continuous.jpg" class="d-block w-100" alt="Solar Posts">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style="text-shadow: 3px 3px 3px rgb(245, 245, 245); color: navy; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Continuous Improvement </h5>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="frontend.jpg" class="d-block w-100" alt="Website Design">
+      <div class="carousel-caption d-none d-md-block">
+        <h6>Website Design (Frontend)</h6>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#workCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#workCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+
       </div>
     </div>
   </div>
