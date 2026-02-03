@@ -172,8 +172,16 @@
     0 40px 100px rgba(0, 0, 0, 0.7),
     0 15px 40px rgba(0, 0, 0, 0.4);
 }
-
-
+.company-img {
+  height: 180px;
+  object-fit: cover;
+  background: #f8f9fa;
+  padding: 15px;
+}
+.card:hover {
+  transform: translateY(-4px);
+  transition: 0.3s ease;
+}
   </style>
 </head>
 <body>
@@ -472,10 +480,17 @@
 
       <!-- Megha Enterprises -->
       <div class="col-md-6" data-aos="fade-right">
-        <div class="card shadow-sm h-100 p-4">
+        <div class="card shadow-sm h-100">
+
+  <!-- Company Image -->
+  <img src="megha.jpg"
+       class="card-img-top company-img"
+       alt="Megha Enterprises">
+
+  <div class="card-body p-4">
 
           <h5 class="fw-bold text-dark">
-            Megha Enterprises – Research & Development Engineer
+            Megha Engineering – Research & Development Engineer
           </h5>
           <p class="text-muted small mb-1">
             Waluj MIDC, Aurangabad | Dec 2024 – Sep 2025
@@ -544,14 +559,23 @@
               AutoCAD / AutoCAD Electrical, MS Word, Excel, PowerPoint,
               Electrical Standards, Technical Datasheets, Solar Documentation Tools
             </p>
+          
+            </div>
 
           </div>
         </div>
       </div>
-
       <!-- MEIL -->
       <div class="col-md-6" data-aos="fade-left">
-        <div class="card shadow-sm h-100 p-4">
+        <div class="card shadow-sm h-100">
+
+  <!-- Company Image -->
+  <img src="meil.jpg"
+       class="card-img-top company-img"
+       alt="MEIL">
+
+  <div class="card-body p-4">
+
 
           <h5 class="fw-bold text-dark">
             MEIL – Graduate Trainee Engineer
@@ -619,8 +643,9 @@
               Electrical Standards, Technical Datasheets.
             </p>
                  
+          </div>
 
-
+          </div>
         </div>
       </div>
 
