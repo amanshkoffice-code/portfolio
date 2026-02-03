@@ -182,6 +182,16 @@
   transform: translateY(-4px);
   transition: 0.3s ease;
 }
+    /* Remove extra left padding for mobile navbar toggler */
+@media (max-width: 991px) {
+  .navbar .navbar-toggler {
+    margin-left: 0 !important;
+  }
+  .navbar .navbar-nav {
+    margin-left: auto !important;
+  }
+}
+
   </style>
 </head>
 <body>
