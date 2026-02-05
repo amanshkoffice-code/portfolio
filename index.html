@@ -192,6 +192,41 @@
   }
 }
 
+.custom-modal {
+  max-width: 1000px;   /* professional width */
+  width: 90%;
+}
+
+.modal-content {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.modal-body img:hover {
+  transform: scale(1.02);
+}
+@keyframes glowTextRed {
+  0% {
+    text-shadow: 0 0 0px rgba(255, 0, 0, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 8px rgba(255, 0, 0, 0.6),
+      0 0 18px rgba(255, 0, 0, 0.4),
+      0 0 28px rgba(180, 0, 0, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 0px rgba(255, 0, 0, 0.2);
+  }
+}
+
+.animated-hint {
+  display: inline-block;
+  animation:
+    floatText 1.8s ease-in-out infinite,
+    glowTextRed 2.2s ease-in-out infinite;
+}
+
   </style>
 </head>
 <body>
@@ -236,31 +271,52 @@
   </div>
 
   <!-- Slides -->
-  <div class="carousel-inner rounded shadow">
+  <<div class="carousel-inner rounded shadow">
 
     <div class="carousel-item active">
-      <img src="autocad.jpg" class="d-block w-100" alt="AutoCAD Drawing">
+      <img src="samples/autocad.jpg"
+     class="d-block w-100 work-click"
+     data-bs-toggle="modal"
+     data-bs-target="#autocadModal">
+
       <div class="carousel-caption d-none d-md-block">
         <h5 style="text-shadow: 3px 3px 3px rgb(245, 245, 245); color: navy; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">AutoCAD Electrical Drawings</h5>
       </div>
     </div>
 
     <div class="carousel-item">
-      <img src="solar-installation.jpg" class="d-block w-100" alt="Solar Installation">
+      <img src="samples/solar-installation.jpg"
+     class="d-block w-100 work-click"
+     data-bs-toggle="modal"
+     data-bs-target="#installModal">
+
       <div class="carousel-caption d-none d-md-block">
         <h5 style="text-shadow: 3px 3px 3px rgb(245, 245, 245); color: navy; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Solar Site installation </h5>
       </div>
     </div>
 
-    <div class="carousel-item">
-      <img src="continuous.jpg" class="d-block w-100" alt="Solar Posts">
-      <div class="carousel-caption d-none d-md-block">
-        <h5 style="text-shadow: 3px 3px 3px rgb(245, 245, 245); color: navy; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Continuous Improvement </h5>
-      </div>
-    </div>
+   <div class="carousel-item">
+  <img src="samples/continuous.jpg"
+       class="d-block w-100 video-click"
+       alt="Continuous Improvement"
+       data-bs-toggle="modal"
+       data-bs-target="#contentModal">
+
+  <div class="carousel-caption d-none d-md-block">
+    <h5 style="text-shadow: 3px 3px 3px rgb(245,245,245);
+               color: navy;
+               font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+      Continuous Improvement
+    </h5>
+  </div>
+</div>
 
     <div class="carousel-item">
-      <img src="frontend.jpg" class="d-block w-100" alt="Website Design">
+      <img src="samples/frontend.jpg"
+     class="d-block w-100 work-click"
+     data-bs-toggle="modal"
+     data-bs-target="#frontendModal">
+
       <div class="carousel-caption d-none d-md-block">
         <h6>Website Design (Frontend)</h6>
       </div>
@@ -284,7 +340,6 @@
   </div>
   <div class="hero-shape"></div>
 </section>
-
 <!-- About Section -->
 <section id="about" class="py-5">
   <div class="container">
@@ -1220,5 +1275,113 @@
   </div>
 </div>
 
+<!--model image work check -->
+<div class="modal fade" id="autocadModal">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5>AutoCAD Sample Work Showcase</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body p-4">
+
+        <img src="ac1.jpg" class="img-fluid w-65 mb-4 rounded shadow">
+        <img src="ac2.jpg" class="img-fluid w-65 mb-4 rounded shadow">
+        <img src="ac3.jpg" class="img-fluid w-65 rounded shadow">
+        <img src="ac4.jpg" class="img-fluid w-65 rounded shadow">
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="installModal">
+   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Solar Installation</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+     <div class="modal-body p-4">
+
+        <img src="si1.jpeg" class="img-fluid w-65 mb-4 rounded shadow">
+        <img src="si2.jpeg" class="img-fluid w-65 mb-4 rounded shadow">
+        <img src="si3.jpg" class="img-fluid w-65 rounded shadow">
+        
+
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="contentModal">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Content Creation Showcase</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="row g-4">
+
+          <div class="col-12">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/_y1OSNbg2nY"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/vSk6tfkkw4Y"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="frontendModal">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable custom-modal">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Frontend Projects</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+
+        <img src="web1.jpg" class="img-fluid w-65 mb-4 rounded shadow">
+        <img src="web2.jpg" class="img-fluid w-65 mb-4 rounded shadow">
+        <img src="web3.jpg" class="img-fluid w-65 rounded shadow">
+        
+
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
 </body>
 </html>
