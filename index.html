@@ -235,6 +235,207 @@ html, body {
     max-height: 320px;
   }
 }
+    /* Welcome Popup Background */
+.welcome-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Popup Box */
+.welcome-box {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  animation: popIn 0.5s ease;
+}
+
+/* Image */
+.welcome-img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Text */
+.welcome-text h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.welcome-text p {
+  margin: 6px 0 12px;
+  font-size: 14px;
+}
+
+/* Button */
+.welcome-text button {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.welcome-text button:hover {
+  background: #0b5ed7;
+}
+
+/* Animations */
+@keyframes popIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+#confettiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* Name Color */
+.hero-name {
+  color: #F8FAFF;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  color: rgba(255,255,255,0.85);
+}
+
+/* Quote Section */
+.hero-quote {
+  border-left: 4px solid #FFD700;
+  padding-left: 15px;
+}
+
+.quote-title {
+  color: #FFD700;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.quote-text {
+  color: #E6ECFF;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.quote-sub {
+  color: #DCE4FF;
+  font-style: italic;
+}
+/* Name + Logo Row */
+.hero-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+  .hero-name-row {
+    justify-content: flex-start;
+  }
+}
+
+/* A Logo Image */
+.hero-logo {
+  width: 75px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Name Styling */
+.hero-name {
+  color: #F8FAFF;
+  font-size: 2.6rem;
+}
+/* Flip Container */
+.flip-container {
+  width: 280px;
+  height: 290px;
+  margin: 0 auto 20px; /* space above text */
+  perspective: 1000px;
+  position: relative;
+}
+
+/* Inner flip */
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative; /* ← FIX: not absolute */
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+}
+
+/* Flip animation */
+.flip-container.flip .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back faces */
+.flip-front,
+.flip-back {
+  position: absolute; /* ← stack on top of each other */
+  width: 100%;
+  height: 100%;
+  top: 2px;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+/* Image style */
+.flip-img {
+  width: 260px;  /* ← fit container */
+  height: 245px; /* ← fit container */
+  border-radius:25px;
+  object-fit: cover;
+  border: 4px solid rgba(255,255,255,0.6);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+.protected-img {
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+.hero {
+  overflow-x: hidden;
+}
   </style>
 </head>
 <body>
@@ -260,12 +461,81 @@ html, body {
 <!-- Hero Section -->
 <section class="hero text-center position-relative">
   <div class="container position-relative" data-aos="fade-up">
+
     <div class="row align-items-center">
+
+      <!-- LEFT SIDE CONTENT -->
       <div class="col-lg-7 text-lg-start text-center">
-        <h1 class="fw-bold">Aman Shaikh</h1>
-        <p class="lead mt-3">Electrical & Power Engineer | R&D Engineer | Frontend Developer (React)</p>
-        <a href="#experience" class="btn btn-light btn-lg mt-3 me-2">Work Experience</a>
-        <a href="#projects" class="btn btn-outline-light btn-lg mt-3">Projects</a>
+
+        <!-- Profile Image -->
+       <div class="flip-container" id="flipImage">
+
+  <div class="flip-inner">
+
+    <!-- Front (Profile Image) -->
+    <div class="flip-front">
+      <div class="img-protect">
+      <img src="profil.jpeg"
+     class="flip-img protected-img"
+     draggable="false"
+     oncontextmenu="return false;">
+     </div>
+    </div>
+
+    <!-- Back (Logo Image) -->
+    <div class="flip-back">
+      <img src="A.png"
+           alt="Logo"
+           class="flip-img">
+    </div>
+
+  </div>
+
+</div>
+
+
+        <!-- Name -->
+       <div class="hero-name-row">
+  <img src="A.png"
+       alt="Logo A"
+       class="hero-logo">
+
+  <h1 class="fw-bold hero-name mb-0">
+    Aman Shaikh
+  </h1>
+</div>
+
+        <!-- Title -->
+        <p class="lead mt-2 hero-subtitle">
+          Electrical & Power Engineer | R&D Engineer | Frontend Developer (React)
+        </p>
+
+        <!-- Buttons -->
+        <a href="#experience" class="btn btn-light btn-lg mt-3 me-2">
+          Work Experience
+        </a>
+
+        <a href="#projects" class="btn btn-outline-light btn-lg mt-3">
+          Projects
+        </a>
+
+        <!-- Quote Section -->
+        <div class="hero-quote mt-5 text-lg-start text-center">
+
+          <h6 class="quote-title">QUOTE</h6>
+
+          <p class="quote-text">
+            “Blending engineering fundamentals with AI-powered creativity
+            to build smarter, cleaner solutions.”
+          </p>
+
+          <p class="quote-sub">
+            “I use technology not to replace thinking,
+            but to amplify it.”
+          </p>
+
+        </div>
+
       </div>
       <div class="col-lg-5 text-center mt-4 mt-lg-0">
              <h4 class="carousel-hint animated-hint">
@@ -1393,7 +1663,62 @@ html, body {
     </div>
   </div>
 </div>
+<script>
+const canvas = document.getElementById("confettiCanvas");
+const ctx = canvas.getContext("2d");
 
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let confetti = [];
+
+for (let i = 0; i < 120; i++) {
+  confetti.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height - canvas.height,
+    r: Math.random() * 6 + 2,
+    d: Math.random() * 50,
+    color: `hsl(${Math.random() * 360}, 100%, 50%)`,
+    tilt: Math.random() * 10 - 10
+  });
+}
+
+function drawConfetti() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  confetti.forEach((c, i) => {
+    ctx.beginPath();
+    ctx.fillStyle = c.color;
+    ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+    ctx.fill();
+
+    c.y += 3;
+    c.x += Math.sin(c.d);
+
+    if (c.y > canvas.height) {
+      confetti[i].y = -10;
+      confetti[i].x = Math.random() * canvas.width;
+    }
+  });
+
+  requestAnimationFrame(drawConfetti);
+}
+
+drawConfetti();
+
+// stop confetti after 5 seconds
+setTimeout(() => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}, 5000);
+</script>
+<script>
+setInterval(() => {
+  document.getElementById("flipImage").classList.toggle("flip");
+}, 10000);
+</script>
+<script>
+document.addEventListener("contextmenu", e => e.preventDefault());
+</scrip
   
 </body>
 </html>
