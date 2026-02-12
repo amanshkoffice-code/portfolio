@@ -423,6 +423,26 @@ html, body {
 .hero {
   overflow-x: hidden;
 }
+    .animated-border {
+  position: relative;
+  border-radius: 12px;
+  padding: 4px;
+  background: linear-gradient(90deg, #0d6efd, #6610f2, #0d6efd);
+  background-size: 300% 300%;
+  animation: rotateBorder 3s linear infinite;
+  box-shadow: 0 0 15px rgba(102, 16, 242, 0.6);
+
+}
+
+@keyframes rotateBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -1675,9 +1695,18 @@ html, body {
       </div>
       <div class="modal-body p-4">
 
-        <img src="web1.jpg" class="img-fluid w-65 mb-4 rounded shadow">
-        <img src="web2.jpg" class="img-fluid w-65 mb-4 rounded shadow">
-        <img src="web3.jpg" class="img-fluid w-65 rounded shadow">
+       <a href="https://yourwebsite1.com" target="_blank">
+  <img src="web1.jpg" class="img-fluid w-65 mb-4 rounded shadow animated-border">
+</a>
+
+<a href="https://yourwebsite2.com" target="_blank">
+  <img src="web2.jpg" class="img-fluid w-65 mb-4 rounded shadow animated-border">
+</a>
+
+<a href="https://yourwebsite3.com" target="_blank">
+  <img src="web3.jpg" class="img-fluid w-65 rounded shadow animated-border">
+</a>
+
         
 
       </div>
