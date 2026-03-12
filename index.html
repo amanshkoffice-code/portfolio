@@ -458,7 +458,30 @@ html, body {
   50% { opacity: 1; }
   100% { opacity: 0.6; }
 }
+.video-popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
 
+.video-popup video{
+  width:80%;
+  max-width:900px;
+  border-radius:10px;
+}
+
+.close-video{
+  position:absolute;
+  top:25px;
+  right:40px;
+  color:white;
+  font-size:28px;
+  cursor:pointer;
+}
   </style>
 </head>
 <body>
@@ -518,10 +541,11 @@ html, body {
 
 
         <!-- Name -->
-       <div class="hero-name-row">
+   <div class="hero-name-row">
   <img src="A.png"
        alt="Logo A"
-       class="hero-logo">
+       class="hero-logo"
+       onclick="openVideo()">
 
   <h1 class="fw-bold hero-name mb-0">
     Aman Shaikh
@@ -1829,6 +1853,27 @@ setInterval(() => {
 <script>
 document.addEventListener("contextmenu", e => e.preventDefault());
 </script>
+      
+<div id="videoPopup" class="video-popup">
 
+  <span class="close-video" onclick="closeVideo()">✖</span>
+
+  <video id="introVideo" controls>
+    <source src="introvideo.mp4" type="video/mp4">
+  </video>
+
+</div>
+      <script>
+function openVideo(){
+  document.getElementById("videoPopup").style.display="flex";
+}
+
+function closeVideo(){
+  const video = document.getElementById("introVideo");
+  video.pause();
+  video.currentTime = 0;
+  document.getElementById("videoPopup").style.display="none";
+}
+</script>
 </body>
 </html>
